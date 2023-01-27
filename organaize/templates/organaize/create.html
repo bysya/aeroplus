@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function viewDiv(){
+    document.getElementById("form1").style.display = "block";
+    } 
+</script>
+<body>
+    <input type="button" value="Створити Замовника" onmousedown="viewDiv()">
+        <form id="form1" method="post", style="display: none;">
+            {% csrf_token %}
+            <input type="text", name="name" placeholder="Ім'я">
+            <input type="tel", name="phone", placeholder="Телефон">
+            <button type="submit">Створити</button>
+        </form>
+</body>
+</html>
+
+
